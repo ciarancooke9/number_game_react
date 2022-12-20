@@ -1,4 +1,9 @@
-import { StyleSheet, ImageBackground } from "react-native";
+import {
+  StyleSheet,
+  ImageBackground,
+  SafeAreaView,
+  StatusBar,
+} from "react-native";
 import { useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -26,7 +31,7 @@ export default function App() {
         style={styles.rootScreen}
         imageStyle={styles.backgroundImage}
       >
-        {screen}
+        <SafeAreaView style={styles.screen}>{screen}</SafeAreaView>
       </ImageBackground>
     </LinearGradient>
   );
@@ -35,6 +40,10 @@ export default function App() {
 const styles = StyleSheet.create({
   rootScreen: {
     flex: 1,
+  },
+  screen: {
+    flex: 1,
+    marginTop: StatusBar.currentHeight,
   },
   backgroundImage: {
     opacity: 0.25,
