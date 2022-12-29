@@ -1,5 +1,5 @@
 import { Text, View, Pressable, StyleSheet } from "react-native";
-import Colors from "../assets/constants/colors";
+import Colors from "../../assets/constants/colors";
 
 function PrimaryButton({ children, onPress }) {
   //takes button text as prop
